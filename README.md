@@ -1,2 +1,1 @@
-# Hillel-final
-final project Hillel "Front-end basic"
+# Khizhniak_homework
