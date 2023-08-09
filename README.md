@@ -1,1 +1,2 @@
-# Khizhniak_homework
+# HobbyArt-GULP
+HobbyArt project
