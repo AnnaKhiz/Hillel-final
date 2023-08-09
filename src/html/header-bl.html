@@ -1,0 +1,59 @@
+<header class="header blue">
+    <div class="container-1920">
+        <div class="header-flex blue">
+            <div class="header__logo">
+                <div class="header__logo-item-1 blue">
+                    <a href="index.html" class="header__logo-img blue">
+                        <picture>
+                            <source srcset="./img/logo-375-1.png" media="(max-width: 375px)">
+                            <source srcset="./img/logo-dark.png" media="(min-width: 376px)">
+                            <img src="./img/logo-dark.png" alt="image logo">
+                        </picture>
+                    </a>
+
+                </div>
+                <div class="header__logo-item-2">
+                    <picture>
+                        <source srcset="./img/law-company-375.png" media="(max-width: 375px)">
+                        <source srcset="./img/law-company.png" media="(max-width: 376px)">
+                        <img src="./img/law-company-dark.png" class="header__logo-desc" alt="image logo-description" >
+                    </picture>
+                </div>
+            </div>
+
+            <div class="header__info blue">
+
+                <div class="header__info-contacts blue">
+                    <ul class="header__info-contacts-list blue">
+                        <li>
+                            <ul class="header__info-contacts-sublist blue">
+                                <li><a href="#">УК</a></li>
+                                <li><a href="#">РУ</a></li>
+                                <li><a href="#">EN</a></li>
+                            </ul>
+                        </li>
+                        <li class="dot regular blue">Kyiv, Mechnikova str, 14/1</li>
+                        <li class="dot position-375 blue"><a href="tel:+380800211927">0800 211 927</a></li>
+                        <li class="hide blue"><a href="#" >
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z"/>
+                            </svg>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <nav class="header__info-navigation blue">
+                    <ul class="header__info-navigation-list blue">
+                        <li><a href="about.html">about us</a></li>
+                        <li><a href="services.html">services</a></li>
+                        <li><a href="team.html">team</a></li>
+                        <li><a href="publications.html">publications</a></li>
+                        <li><a href="contacts.html">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    @@include('burger.html',{})
+</header>

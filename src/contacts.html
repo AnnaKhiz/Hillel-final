@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+@@include('html/head.html', {"title": "Contacts"})
+<body>
+@@include('html/header-w.html', {"page-name": "contacts"})
+    <div class="container-1390">
+        <main class="main__contacts">
+            <div class="main__contacts-block">
+                <ul class="main__contacts-list">
+                    <li>Kyiv,</li>
+                    <li class="line">Mechnikova str, 14</li>
+                    <li><a href="tel:+380800211927">0800 211 927</a></li>
+                    <li class="line"><a href="mailto:contact@forstudy.space">contact@forstudy.space</a></li>
+                    <li>
+                        <ul class="main__contacts-sublist">
+                            <li><a href="#">
+                                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"/>
+                                </svg>
+                            </a></li>
+                            <li><a href="#">Our page on facebook</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="main__contacts-form">
+                <form action="#" method="post" id="contact-form" >
+                    <h1 class="main__contacts-form-label">
+                        We would like to help you
+                    </h1>
+                    <input type="text" name="name" placeholder="Name" id="name" required>
+                    <textarea name="user-message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                    <h2 class="main__form-text">
+                        How to answer you?
+                    </h2>
+                    <input type="tel" name="phone" placeholder="Phone number" id="tel" required>
+
+                    <input type="email" name="email" placeholder="Email" id="email" required>
+                    <button type="submit" id="btn">
+                        <span id="btnDefault" class="">Send message</span>
+                        <div class="hidden" id="hidden">
+                            <div class="text-primary spinner-border" role="status" id="loading">
+                                <span class="visually-hidden"></span>
+                            </div>
+                        </div>
+                    </button>
+
+                </form>
+            </div>
+
+
+        </main>
+    </div>
+
+
+@@include('html/footer.html', {})
+<script src="js/app.min.js"></script>
+</body>
+</html>
