@@ -11,7 +11,8 @@ export function loadArticleTemplate() {
                     element.classList.remove('blue');
                     element.classList.add('white');
                 })
-                const curBlock = document.getElementById('services-template-block');
+                // const curBlock = document.getElementById('services-template-block');
+                const curBlock = document.querySelector('[data-block="template"]');
                 curBlock.style.background = 'white';
                 const tArticle = document.getElementById('template-article');
                 curBlock.innerHTML = tArticle.innerHTML;
