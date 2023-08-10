@@ -2,11 +2,60 @@
 @import 'mixins.sass'
 @import 'variables.sass'
 @import 'fonts.sass'
-@import 'common-styles.sass'
+@import 'burger.sass'
 
+html, body
+  height: 100%
+  position: relative
+  scrollbar-color: rgba(0,0,0,0.01)
+::-webkit-scrollbar
+  height: 1px
+  background-color: rgba(0,0,0,0.01)
+::-webkit-scrollbar-thumb
+  background-color: rgba(0,0,0,0.01)
+::-webkit-scrollbar-thumb:hover
+  background-color: rgba(0,0,0,0.01)
+.container
+  max-width: 1350px
+  padding: 0 15px
+  margin: 0 auto
+.container-1920-f
+  @include container-1920-f
 
-.menu__btn svg
-  stroke: $color_hover-text
+.container-1920 //header, footer, 160/160
+  @include container-1920
+
+.container-about
+  max-width: 1110px
+  padding: 0 15px
+  margin: 0 auto
+.container-1390 // 280/280
+  @include container-1390
+.flex-style
+  min-height: 100%
+  display: flex
+  flex-direction: column
+
+.container-clients-gallery
+  @include container-clients-gallery
+.fixed
+  overflow: hidden
+  width: 100%
+.scroll
+  overflow: auto
+  scrollbar-color: transparent
+  &::-webkit-scrollbar
+    width: 1px
+    background-color: transparent
+  &::-webkit-scrollbar-thumb
+    background-color: transparent
+  &::-webkit-scrollbar-thumb:hover
+    background-color: transparent
+#menu__toggle
+  opacity: 0
+picture
+  display: block
+  font-size: 0
 
 ul.nav-pills .nav-link.active, .nav-pills .show>.nav-link
   @include h1-label-pink
@@ -72,6 +121,19 @@ body
       &:before
         content: ''
         background-color: $color_gray-bg
+  &.blue
+    & .menu__btn svg
+      stroke: $color_main-blue
+      fill: none
+      z-index: 3
+      position: absolute
+      right: 22px
+      top: 52.5px
+      &:hover
+        fill: $color_gray-separator
+        border-radius: 8px
+      @media screen and (max-width: 524px)
+        stroke: $color_hover-text
   &-flex
     display: flex
     justify-content: space-between
@@ -89,6 +151,14 @@ body
     &.white
       & .menu__btn svg
         stroke: none
+        fill: none
+        z-index: 3
+        position: absolute
+        right: 22px
+        top: 52.5px
+        &:hover
+          fill: $color_gray-separator
+          border-radius: 8px
         @media screen and (max-width: 524px)
           stroke: $color_main-blue
       @media screen and (max-width: 524px)
@@ -98,6 +168,7 @@ body
         display: flex
         padding-top: 13px
         padding-bottom: 0px
+
   &__logo
     @media screen and (max-width: 768px)
       margin-top: 56px
@@ -1331,6 +1402,7 @@ body
           @media screen and (max-width: 599px)
             display: inline-block
       & div.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
+        position: absolute
         bottom: 30px
       & div.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal
         text-align: center
