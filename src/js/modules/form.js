@@ -12,38 +12,28 @@ export function sendContactForm() {
 	const formInputTel = document.getElementById('tel');
 	const formInputEmail = document.getElementById('email');
 	const messageWritten = document.getElementById('message');
+	const errorBlock = document.getElementById('error-block');
+	const regexTel = new RegExp('^[0-9]{0,12}$');
+	const regexName = new RegExp('^[A-Za-zА-Яа-яЁёЁЇїІіЄєҐґ_\-\\s]{2,10}$');
+	const regexMessage = new RegExp('^[а-яА-Яa-zA-Z0-9\\s?!,.\'Ёё]+$');
+	const regexEmail = new RegExp('^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$');
 
-	formInputName.addEventListener('keyup', function () {
-		const regexName = new RegExp('^[A-Za-zА-Яа-яЁёЁЇїІіЄєҐґ_\-\\s]{2,10}$');
-		const regexTwo = new RegExp('^([A-Za-zА-Яа-яЁёЁЇїІіЄєҐґ]{2,10})+\\s+([A-Za-zА-Яа-яЁёЁЇїІіЄєҐґ]{2,10})$');
-		if (formInputName.value.length > 1) {
-			if (!((regexName.test(formInputName.value)) || (regexTwo.test(formInputName.value)))) {
-				alert('Имя должно содержить только буквы!');
-				formInputName.value = formInputName.value.replace(/[^A-Za-zА-Яа-яЁёЁЇїІіЄєҐґ_\-\s]/gm, '');
+	function checkFields(field, regex) {
+		field.addEventListener('keyup', (e) => {
+			e.preventDefault();
+			if (field.value.length > 1 && field.value !== '') {
+				if (!regex.test(field.value)) {
+					errorBlock.innerText = "Не верный формат ввода!";
+				} else {
+					errorBlock.innerText = "";
+				}
 			}
-		}
-	});
-
-
-	formInputTel.addEventListener('keyup', function () {
-		const regexTel = new RegExp('^[0-9]{0,12}$');
-		if (formInputTel.value.length > 1) {
-			if (!regexTel.test(formInputTel.value)) {
-				alert('Номер телефона должен содержить только цифры!');
-				formInputTel.value = formInputTel.value.replace(/[^\d]/gm, '');
-			}
-		}
-	});
-
-
-	formInputEmail.addEventListener('keyup', function () {
-		const regex = new RegExp('^[A-Za-z0-9\\.\\_\\-]+@[a-z\\.]+$');
-		if (formInputEmail.value.length > 1) {
-			if (!regex.test(formInputEmail.value)) {
-				console.error('email - entered forbidden symbols');
-			}
-		}
-	});
+		});
+	}
+	checkFields(formInputName, regexName);
+	checkFields(messageWritten, regexMessage);
+	checkFields(formInputTel, regexTel);
+	checkFields(formInputEmail, regexEmail);
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault()

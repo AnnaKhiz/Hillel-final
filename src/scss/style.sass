@@ -494,69 +494,6 @@ body
         @media screen and (max-width: 375px)
           max-height: 270px
 
-  //&__services
-  //  &-container
-  //    display: flex
-  //    justify-content: space-around
-  //    flex-wrap: wrap
-  //    row-gap: 60px
-  //    column-gap: 60px
-  //    @media screen and (max-width: 375px)
-  //      row-gap: 0px
-  //  &-item
-  //    max-width: 29.333%
-  //    @media screen and (max-width: 1366px)
-  //      max-width: 28.333%
-  //    @media screen and (max-width: 768px)
-  //      max-width: 45.333%
-  //      margin-bottom: 30px
-  //    @media screen and (max-width: 672px)
-  //      max-width: 100%
-  //
-  //  &-link
-  //    @include h3-label-caps
-  //    color: $color_active-regular
-  //    transition: $trans
-  //    margin-bottom: 10px
-  //    display: block
-  //    &:hover
-  //      @include link-hover-trans
-  //
-  //  &-label
-  //    @include h1-label-pink
-  //    max-width: 1600px
-  //    overflow: hidden
-  //    margin-bottom: 60px
-  //    @media screen and (max-width: 375px)
-  //      margin-bottom: 30px
-  //  &-item-link
-  //    display: block
-  //    background-color: $color_hover-text
-  //    width: 92px
-  //    height: 92px
-  //    border-radius: 24px
-  //    position: relative
-  //    margin-bottom: 30px
-  //    & svg
-  //      position: absolute
-  //      top: 14px
-  //      left: 14px
-  //
-  //  &-text
-  //    overflow: hidden
-  //    max-height: 110px
-  //    margin-bottom: 15px
-  //    & a
-  //      @include text-bold (1.375rem, 1.6875rem)
-  //      color: $color_active-regular
-  //      transition: $trans
-  //      vertical-align: middle
-  //      &:hover
-  //        @include link-hover-trans
-  //
-  //  &-desc
-  //    @include paragraph-text-white
-  //    overflow: hidden
   &__quote
     padding-top: 80px
     padding-bottom: 30px
@@ -1090,15 +1027,13 @@ body
         &::placeholder
           @include text-normal (1rem, 1.625rem)
           color: $color_gray-text
-      & input:not(:last-of-type)
+      & input
         margin-bottom: 15px
-      & input:last-of-type, textarea
+      & textarea
         margin-bottom: 30px
       &-text
         @include h3-label-caps
         color: $color_gray-text
-        letter-spacing: 1px
-        text-transform: uppercase
         margin-bottom: 15px
       & button
         padding: 18px 0
@@ -1115,6 +1050,13 @@ body
         &:active
           background-color: $color_active-active
           transition: $trans
+      &-error-message
+        //margin-top: -15px
+        text-align: center
+        color: red
+        height: 20px
+        margin-bottom: 15px
+        //padding-bottom: 15px
 
   &__services
     background: $color_gradient-superSoft
@@ -1245,11 +1187,6 @@ body
     &-publications
       background-color: $color_gray-bg
       padding: 110px 0 30px 0
-      //padding-top: 110px
-      ////padding-bottom: 30px
-      //background-color: $color_gray-bg
-      //&-subitem
-      //  padding: 30px
   &__about
     padding-top: 60px
     @media screen and (max-width: 815px)
@@ -1528,6 +1465,10 @@ body
               &:hover
                 color: $color_accent-pink
                 transition: $trans
+        &-contacts + .clearfix:after
+          content: ""
+          clear: both
+          display: table
         &-text
           @include paragraph-text-black
         &-text:not(:last-of-type)
@@ -1569,6 +1510,7 @@ body
         padding: 10px
     &.show
       top: 0
+      display: block
       & .main__modal-subscribe
         transition: all ease-in 1s
         opacity: 1
@@ -1654,144 +1596,57 @@ body
         &:active
           background-color: $color_active-active
           transition: $trans
+  &__additional
+    &-round-corner
+      position: relative
+      display: block
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        height: 12px
+        background: linear-gradient(302deg, #323264 62.93%, #323264 38.17%, #643E72 132.46%)
+        border-radius: 0 0 12px 12px
+        width: 100%
+        @media screen and (max-width: 1440px)
+          background: linear-gradient(302deg, #323264 62.93%, #323264 38.17%, #643E72 157.46%)
+        @media screen and (max-width: 1024px)
+          background: linear-gradient(302deg, #323264 62.93%, #323264 38.17%, #643E72 175.46%)
+        @media screen and (max-width: 768px)
+          background: linear-gradient(13deg, #323264 87.93%, #323264 17.17%, #643E72 155.46%)
+    &-line-1
+      position: relative
+      display: block
+      &:after
+        content: ''
+        position: absolute
+        top: 12px
+        left: 20px
+        right: 20px
+        height: 10px
+        background-color: $color_gray-line
+        border-radius: 0px 0px 12px 12px
+    &-line-2
+      position: relative
+      display: block
+      &:after
+        content: ''
+        position: absolute
+        top: 22px
+        left: 40px
+        height: 10px
+        right: 40px
+        background-color: $color_gray-separator
+        border-radius: 0px 0px 12px 12px
 
 
-
-
-
-.swiper
-  width: 100%
-  height: 100%
-  &-wrapper
-    margin-bottom: 50px
-.swiper-slide
-  height: 298px
-  text-align: left
-  background: $color_hover-text
-  display: -webkit-box
-  display: -ms-flexbox
-  display: -webkit-flex
-  display: flex
-  -webkit-box-pack: center
-  -ms-flex-pack: center
-  -webkit-justify-content: center
-  justify-content: center
-  -webkit-box-align: center
-  -ms-flex-align: center
-  -webkit-align-items: center
-  align-items: center
-  @media screen and (max-width: 1440px)
-    height: 344px
-  @media screen and (max-width: 1024px)
-    height: 528px
-  @media screen and (max-width: 768px)
-    height: 963px
-    align-items: flex-start
-    background-color: $color_gray-bg
-    border-radius: 12px
-  @media screen and (max-width: 657px)
-    height: 1000px
-  @media screen and (max-width: 556px)
-    height: 1041px
-  @media screen and (max-width: 480px)
-    height: 1078px
-  @media screen and (max-width: 400px)
-    height: 1158px
-  @media screen and (max-width: 375px)
-    height: 1186px
-  @media screen and (max-width: 320px)
-    height: 1125px
-.swiper-slide img
-  display: block
-  width: 100%
-  height: 100%
-  object-fit: cover
-  @media screen and (max-width: 1366px)
-    display: flex
-    align-items: center
-  @media screen and (max-width: 768px)
-    justify-content: center
-  span.swiper-pagination-bullet
-    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,16px))
-    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,16px))
-    background-color: var(--swiper-pagination-bullet-inactive-color,$color_active-regular)
-  div.swiper-horizontal>.swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal,
-  .swiper-pagination-custom, .swiper-pagination-fraction
-    top: 326px
-    @media screen and (max-width: 1440px)
-      top: 375px
-    @media screen and (max-width: 1024px)
-      top: 559px
-    @media screen and (max-width: 768px)
-      top: 994px
-    @media screen and (max-width: 657px)
-      top: 1010px
-    @media screen and (max-width: 650px)
-      top: 1029px
-    @media screen and (max-width: 556px)
-      top: 1070px
-    @media screen and (max-width: 480px)
-      top: 1108px
-    @media screen and (max-width: 400px)
-      top: 1190px
-    @media screen and (max-width: 375px)
-      top: 1216px
-    @media screen and (max-width: 320px)
-      top: 1154px
-
-.additional
-  &-round-corner
-    position: relative
-    display: block
-    &:after
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      height: 12px
-      background: linear-gradient(302deg, #323264 62.93%, #323264 38.17%, #643E72 132.46%)
-      border-radius: 0 0 12px 12px
-      width: 100%
-      @media screen and (max-width: 1440px)
-        background: linear-gradient(302deg, #323264 62.93%, #323264 38.17%, #643E72 157.46%)
-      @media screen and (max-width: 1024px)
-        background: linear-gradient(302deg, #323264 62.93%, #323264 38.17%, #643E72 175.46%)
-      @media screen and (max-width: 768px)
-        background: linear-gradient(13deg, #323264 87.93%, #323264 17.17%, #643E72 155.46%)
-
-  &-line-1
-    position: relative
-    display: block
-    &:after
-      content: ''
-      position: absolute
-      top: 12px
-      left: 20px
-      right: 20px
-      height: 10px
-      background-color: $color_gray-line
-      border-radius: 0px 0px 12px 12px
-  &-line-2
-    position: relative
-    display: block
-    &:after
-      content: ''
-      position: absolute
-      top: 22px
-      left: 40px
-      height: 10px
-      right: 40px
-      background-color: $color_gray-separator
-      border-radius: 0px 0px 12px 12px
-
-.line-footer
-  &:before
-    @include line-footer
 .footer
   background-color: $color_gray-bg
   padding: 0px 0px 30px 0px
-
+  & .line-footer
+    &:before
+      @include line-footer
   &__flex
     display: flex
     justify-content: space-between
@@ -1808,7 +1663,6 @@ body
     @media screen and (max-width: 630px)
       display: block
       max-width: 100%
-
     & li:not(:last-of-type):after
       @include menu-dots-team
       @media screen and (max-width: 630px)
@@ -1860,7 +1714,6 @@ body
       fill: $color_accent-pink
       transition: $trans
   &__copyright
-
     &-text
       @include text-normal (1rem, 1.25rem)
       color: $color_gray-text
@@ -1875,13 +1728,8 @@ body
   display: none
 .spinner-border
   display: ''
-.clearfix:after
-  content: ""
-  clear: both
-  display: table
-.line-footer
-  &:before
-    @include line-footer
+
+
 //.switch-on
 //  background: #E6E6F0
 //  &:after

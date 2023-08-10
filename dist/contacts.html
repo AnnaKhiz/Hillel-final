@@ -136,14 +136,15 @@
                     <h1 class="main__contacts-form-label">
                         We would like to help you
                     </h1>
-                    <input type="text" name="name" placeholder="Name" id="name" required>
-                    <textarea name="user-message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                    <h2 class="main__form-text">
+                    <input type="text" name="name" placeholder="Name" id="name" required maxlength="10">
+                    <textarea name="user-message" id="message" cols="30" rows="10" placeholder="Message" required maxlength="120"></textarea>
+                    <h2 class="main__contacts-form-text">
                         How to answer you?
                     </h2>
-                    <input type="tel" name="phone" placeholder="Phone number" id="tel" required>
+                    <input type="tel" name="phone" placeholder="Phone number" id="tel" required maxlength="12">
 
                     <input type="email" name="email" placeholder="Email" id="email" required>
+                    <p id="error-block" class="main__contacts-form-error-message"></p>
                     <button type="submit" id="btn">
                         <span id="btnDefault" class="">Send message</span>
                         <div class="hidden" id="hidden">

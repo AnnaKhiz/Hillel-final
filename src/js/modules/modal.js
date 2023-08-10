@@ -1,18 +1,19 @@
 export function callModalFeedback() {
-    $(document).ready(function () {
-        $("#callModal").on('click', function (e) {
-            $('#modal').toggleClass('show');
-            console.log('show')
-            e.preventDefault();
-        });
+    const callModal = document.getElementById('callModal');
+    const closeModal = document.getElementById('closeModal');
+    const modalWindow = document.getElementById('modal');
 
-        $("#closeModal").on('click', function (e) {
-            $('#modal').toggleClass('show');
-            e.preventDefault();
-        });
+    callModal.addEventListener('click', (e) => {
+        e.preventDefault();
+        modalWindow.classList.toggle('show');
+    })
 
-    });
+    closeModal.addEventListener('click', (e) => {
+        e.preventDefault();
+        modalWindow.classList.toggle('show');
+    })
 }
+
 
 
 
