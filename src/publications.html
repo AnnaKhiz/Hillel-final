@@ -4,7 +4,7 @@
 <body>
 @@include('html/header-w.html', {"page-name": "publications"})
 
-<main class="main__publications">
+<main class="main__publications" id="publications-template-block">
 <!--    <section class="main__publications-container">-->
         <div class="container-1920">
     <div class="main__publications-switcher switcher" id="switcher-on-off">
@@ -17,7 +17,7 @@
                     <img src="./img/public-1.png" alt="image publications" id="my_image">
                     <div class="main__publications-subitem">
                         <p class="main__publications-text">
-                            <a href="publications-article.html" id="label">
+                            <a href="#" id="label" data-link="article" data-link="article">
                                 Equity associate
                             </a>
                         </p>
@@ -34,7 +34,7 @@
                     <img src="./img/public-2.png" alt="image publications" id="my_image-2">
                     <div class="main__publications-subitem">
                         <p class="main__publications-text">
-                            <a href="publications-article.html" id="label-2">
+                            <a href="#" id="label-2" data-link="article">
                                 Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR
                             </a>
                         </p>
@@ -51,7 +51,7 @@
                     <img src="./img/public-3.png" alt="image publications" id="my_image-3">
                     <div class="main__publications-subitem">
                         <p class="main__publications-text">
-                            <a href="publications-article.html" id="label-3">
+                            <a href="#" id="label-3" data-link="article">
                                 Millennial Testament
                             </a>
                         </p>
@@ -68,7 +68,7 @@
                     <img src="./img/public-4.png" alt="image publications" id="my_image-4">
                     <div class="main__publications-subitem">
                         <p class="main__publications-text">
-                            <a href="publications-article.html" id="label-4">
+                            <a href="#" id="label-4" data-link="article">
                                 Language Law: How to Make Your Website Relevant
                             </a>
                         </p>
@@ -85,7 +85,7 @@
                     <img src="./img/public-5.png" alt="image publications" id="my_image-5">
                     <div class="main__publications-subitem">
                         <p class="main__publications-text">
-                            <a href="publications-article.html">
+                            <a href="#" data-link="article">
                                 Reimbursement of the child's tuition fees in kindergarten and school
                             </a>
                         </p>
@@ -102,7 +102,7 @@
                     <div class="main__publications-item-nopic"></div>
                     <div class="main__publications-subitem">
                         <p class="main__publications-text">
-                            <a href="publications-article.html" id="label-5">
+                            <a href="#" id="label-5" data-link="article">
                                 Currency control is dead, long live currency control!
                             </a>
                         </p>
@@ -126,6 +126,7 @@
 </main>
 
 @@include('html/footer.html', {})
+@@include('html/template-article.html', {})
 <script src="js/app.min.js"></script>
 </body>
 </html>

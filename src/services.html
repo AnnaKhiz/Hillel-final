@@ -3,21 +3,22 @@
 @@include('html/head.html', {"title": "Services"})
 <body>
 @@include('html/header-bl.html', {})
-<main class="main__services bg-color-gradient">
+<main class="main__services bg-color-gradient" id="services-template-block">
     <div class="container-1920">
     <section class="main__services-block">
         <h1 class="main__services-label">
             What can we do better than others?
         </h1>
-
         @@include('html/services-menu.html', {})
-
     </section>
 </div>
 @@include('html/additional-lines.html', {})
 @@include('html/clients-gallery.html', {})
 </main>
 @@include('html/footer.html', {})
+@@include('html/template-services.html', {})
+@@include('html/template-article.html', {})
+@@include('html/template-logo-fragment.html', {})
 <script src="js/app.min.js"></script>
 </body>
 </html>

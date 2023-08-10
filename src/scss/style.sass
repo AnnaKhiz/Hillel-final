@@ -290,7 +290,7 @@ body
         & li.regular + li a
           @include text-bold (1rem, 1.25rem)
           color: $color_hover-text
-        & li.regular.white + li a.white
+        & li.regular.white + li a
           @include text-bold (1rem, 1.25rem)
           color: $color_gray-text
         & li.dot:after
@@ -311,6 +311,8 @@ body
             left: 189%
         & li.position-375.white a
           @media screen and (max-width: 524px)
+            //@include text-bold (1rem, 1.25rem)
+            //color: #B3B3BA
             width: 105px
             top: 2%
             left: 245%
@@ -389,7 +391,7 @@ body
           justify-content: flex-start
           position: relative
           z-index: 2
-      &.white li:nth-of-type(1) a:link, &.white li:nth-of-type(1) a
+      //&.white li:nth-of-type(1) a:link, &.white li:nth-of-type(1) a
         @include link-hover-pink
         border-bottom: 2px solid $color_accent-pink
         padding-bottom: 3px
