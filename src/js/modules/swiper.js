@@ -24,28 +24,5 @@ export function callSwiperIndex() {
             el: ".swiper-pagination",
             clickable: true,
         },
-
-        // breakpoints: {
-        //     200: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 40,
-        //     },
-        //     375: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 40,
-        //     },
-        //     600: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 40,
-        //     },
-        //     768: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 40,
-        //     },
-        //     1920: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 40,
-        //     },
-        // },
     });
 }

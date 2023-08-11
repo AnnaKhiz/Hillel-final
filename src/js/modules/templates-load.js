@@ -1,7 +1,7 @@
 export function loadArticleTemplate() {
     document.addEventListener('click', (e) => {
         if (e.target.dataset.link === 'article') {
-            if (location.href === 'http://localhost:5000/publications.html') {
+            if (location.href === 'https://anna-khizhniak.site/portfolio/final-hillel/publications.html') {
                 const pubBlock = document.getElementById('publications-template-block');
                 const templateArticle = document.getElementById('template-article');
                 pubBlock.innerHTML = templateArticle.innerHTML;
@@ -31,8 +31,8 @@ export function loadArticleTemplate() {
                         button.firstChild.style.paddingBottom = padding;
                     }
                 }
-                changeColor(publications, 'http://localhost:5000/services.html#','#f0145a','2px solid #f0145a', '3px' );
-                changeColor(services, 'http://localhost:5000/services.html#','#24a3ff', 'none', 'none' );
+                changeColor(publications, 'https://anna-khizhniak.site/portfolio/final-hillel/services.html#','#f0145a','2px solid #f0145a', '3px' );
+                changeColor(services, 'https://anna-khizhniak.site/portfolio/final-hillel/services.html#','#24a3ff', 'none', 'none' );
             }
 
         }

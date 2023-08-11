@@ -25,10 +25,10 @@ export function setLinksColor () {
         }
     }
 
-    changeColor(services, `http://localhost:5000/services.html`);
-    changeColor(about, `http://localhost:5000/about.html`);
-    changeColor(team, `http://localhost:5000/team.html`);
-    changeColor(team, `http://localhost:5000/team-entry.html`);
-    changeColor(publications, `http://localhost:5000/publications.html`);
-    changeColor(contact, `http://localhost:5000/contacts.html`);
+    changeColor(services, `https://anna-khizhniak.site/portfolio/final-hillel/services.html`);
+    changeColor(about, `https://anna-khizhniak.site/portfolio/final-hillel/about.html`);
+    changeColor(team, `https://anna-khizhniak.site/portfolio/final-hillel/team.html`);
+    changeColor(team, `https://anna-khizhniak.site/portfolio/final-hillel/team-entry.html`);
+    changeColor(publications, `https://anna-khizhniak.site/portfolio/final-hillel/publications.html`);
+    changeColor(contact, `https://anna-khizhniak.site/portfolio/final-hillel/contacts.html`);
 }
